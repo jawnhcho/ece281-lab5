@@ -52,22 +52,6 @@ architecture top_basys3_arch of top_basys3 is
      	);
 	end component controller_fsm;
 
-	--component regA is
-    	--port (
-        	--i_A	: in STD_LOGIC_VECTOR (7 downto 0);
-        	--i_cycle: in STD_LOGIC_VECTOR (3 downto 0);
-        	--o_A	: out STD_LOGIC_VECTOR (7 downto 0)
-    	--);
-	--end component regA;
-
-	--component regB is
-    	--port (
-        	--i_B	: in STD_LOGIC_VECTOR (7 downto 0);
-        	--o_cycle: in STD_LOGIC_VECTOR (3 downto 0);
-        	--o_B	: out STD_LOGIC_VECTOR (7 downto 0)
-    	--);
-	--end component regB;
-    
     component ALU is
     	Port (
        	i_A   	: in  STD_LOGIC_VECTOR (7 downto 0);
@@ -98,15 +82,16 @@ architecture top_basys3_arch of top_basys3 is
 	end component twoscomp_decimal;
     
 	component TDM4 is
-    	Port ( i_clk    	: in  STD_LOGIC;
-           	i_reset  	: in  STD_LOGIC; -- asynchronous
-           	i_sign   	: in  STD_LOGIC_VECTOR (3 downto 0);
-           	i_hund   	: in  STD_LOGIC_VECTOR (3 downto 0);
-           	i_tens   	: in  STD_LOGIC_VECTOR (3 downto 0);
-           	i_ones   	: in  STD_LOGIC_VECTOR (3 downto 0);
-           	o_data   	: out STD_LOGIC_VECTOR (3 downto 0);
-           	o_sel    	: out STD_LOGIC_VECTOR (3 downto 0)	-- selected data line (one-cold)
-    	);
+	   generic ( constant k_WIDTH : natural  := 4); -- bits in input and output
+        Port ( i_clk        : in  STD_LOGIC;
+               i_reset        : in  STD_LOGIC; -- asynchronous
+               i_sign         : in  STD_LOGIC_VECTOR (k_WIDTH - 1 downto 0);
+               i_hund         : in  STD_LOGIC_VECTOR (k_WIDTH - 1 downto 0);
+               i_tens         : in  STD_LOGIC_VECTOR (k_WIDTH - 1 downto 0);
+               i_ones         : in  STD_LOGIC_VECTOR (k_WIDTH - 1 downto 0);
+               o_data        : out STD_LOGIC_VECTOR (k_WIDTH - 1 downto 0);
+               o_sel        : out STD_LOGIC_VECTOR (3 downto 0)    -- selected data line (one-cold)
+        );
 	end component TDM4;
 	 
 	component sevenSegDecoder is
@@ -143,49 +128,7 @@ begin
    	i_adv   => btnC,
    	o_cycle => w_cycle
    	);
-    
-    --regA_inst : regA
-   	--port map(
-   	--i_A(0) => sw(0),
-   	--i_A(1) => sw(1),
-   	--i_A(2) => sw(2),
-   	--i_A(3) => sw(3),
-   	--i_A(4) => sw(4),
-   	--i_A(5) => sw(5),
-   	--i_A(6) => sw(6),
-   	--i_A(7) => sw(7),
-   	--o_A(0) => w_A(0),
-   	--o_A(1) => w_A(1),
-   	--o_A(2) => w_A(2),
-   	--o_A(3) => w_A(3),
-   	--o_A(4) => w_A(4),
-   	--o_A(5) => w_A(5),
-   	--o_A(6) => w_A(6),
-   	--o_A(7) => w_A(7),
-   	--i_cycle => w_cycle
-   	--);
-  	 
-	--regB_inst : regA
-   	--port map(
-   	--i_A(0) => sw(0),
-   	--i_A(1) => sw(1),
-   	--i_A(2) => sw(2),
-   	--i_A(3) => sw(3),
-   	--i_A(4) => sw(4),
-   	--i_A(5) => sw(5),
-   	--i_A(6) => sw(6),
-   	--i_A(7) => sw(7),
-   	--o_A(0) => w_B(0),
-   	--o_A(1) => w_B(1),
-   	--o_A(2) => w_B(2),
-   	--o_A(3) => w_B(3),
-   	--o_A(4) => w_B(4),
-   	--o_A(5) => w_B(5),
-   	--o_A(6) => w_B(6),
-   	--o_A(7) => w_B(7),
-   	--i_cycle => w_cycle   
-   	--);
-  	 
+
 	clkdiv_inst : clock_divider    	 --instantiation of clock_divider to take
    	generic map ( k_DIV => 50000000 ) -- 1 Hz clock from 100 MHz
    	port map(                     	 
@@ -217,11 +160,14 @@ begin
    	);    
   	 
 	TDM_inst : TDM4
+	generic map ( k_WIDTH => 4 )
    	port map(  	 
    	i_clk => w_clk,
    	i_reset => btnU,
    	i_sign(3) => w_D3,
-   	i_sign(2 downto 0) => "0",
+   	i_sign(2) => '0',
+   	i_sign(1) => w_D3,
+   	i_sign(0) => '0',
    	i_hund => w_D2,
    	i_tens => w_D1,
    	i_ones => w_D0,
@@ -251,7 +197,7 @@ begin
           	  w_result when w_cycle = "0100" else
           	  "00000000";
          	 
-	led(12 downto 4) <= "0";
+	led(12 downto 4) <= (others => '0');
          	 
 
     
