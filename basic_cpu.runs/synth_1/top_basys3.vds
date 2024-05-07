@@ -1,0 +1,440 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Mon May  6 21:52:33 2024
+# Process ID: 12232
+# Current directory: C:/Users/akeny/Downloads/ece281-lab5/basic_cpu.runs/synth_1
+# Command line: vivado.exe -log top_basys3.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_basys3.tcl
+# Log file: C:/Users/akeny/Downloads/ece281-lab5/basic_cpu.runs/synth_1/top_basys3.vds
+# Journal file: C:/Users/akeny/Downloads/ece281-lab5/basic_cpu.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source top_basys3.tcl -notrace
+Command: synth_design -top top_basys3 -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 20100 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 340.973 ; gain = 99.887
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top_basys3' [C:/Users/akeny/Downloads/ece281-lab5/src/hdl/top_basys3.vhd:46]
+INFO: [Synth 8-3491] module 'controller_fsm' declared at 'C:/Users/akeny/Downloads/ece281-lab5/basic_cpu.srcs/sources_1/new/controller_fsm.vhd:34' bound to instance 'controller_fsm_inst' of component 'controller_fsm' [C:/Users/akeny/Downloads/ece281-lab5/src/hdl/top_basys3.vhd:134]
+INFO: [Synth 8-638] synthesizing module 'controller_fsm' [C:/Users/akeny/Downloads/ece281-lab5/basic_cpu.srcs/sources_1/new/controller_fsm.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'controller_fsm' (1#1) [C:/Users/akeny/Downloads/ece281-lab5/basic_cpu.srcs/sources_1/new/controller_fsm.vhd:43]
+INFO: [Synth 8-3491] module 'eightBitRegister' declared at 'C:/Users/akeny/Downloads/ece281-lab5/basic_cpu.srcs/sources_1/new/eightBitRegister.vhd:34' bound to instance 'regA' of component 'eightBitRegister' [C:/Users/akeny/Downloads/ece281-lab5/src/hdl/top_basys3.vhd:142]
+INFO: [Synth 8-638] synthesizing module 'eightBitRegister' [C:/Users/akeny/Downloads/ece281-lab5/basic_cpu.srcs/sources_1/new/eightBitRegister.vhd:41]
+WARNING: [Synth 8-614] signal 'i_data' is read in the process but is not in the sensitivity list [C:/Users/akeny/Downloads/ece281-lab5/basic_cpu.srcs/sources_1/new/eightBitRegister.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'eightBitRegister' (2#1) [C:/Users/akeny/Downloads/ece281-lab5/basic_cpu.srcs/sources_1/new/eightBitRegister.vhd:41]
+INFO: [Synth 8-3491] module 'eightBitRegister' declared at 'C:/Users/akeny/Downloads/ece281-lab5/basic_cpu.srcs/sources_1/new/eightBitRegister.vhd:34' bound to instance 'regB' of component 'eightBitRegister' [C:/Users/akeny/Downloads/ece281-lab5/src/hdl/top_basys3.vhd:150]
+	Parameter k_DIV bound to: 250 - type: integer 
+INFO: [Synth 8-3491] module 'clock_divider' declared at 'C:/Users/akeny/Downloads/ece281-lab5/src/hdl/clock_divider.vhd:53' bound to instance 'clkdiv_inst' of component 'clock_divider' [C:/Users/akeny/Downloads/ece281-lab5/src/hdl/top_basys3.vhd:157]
+INFO: [Synth 8-638] synthesizing module 'clock_divider' [C:/Users/akeny/Downloads/ece281-lab5/src/hdl/clock_divider.vhd:63]
+	Parameter k_DIV bound to: 250 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'clock_divider' (3#1) [C:/Users/akeny/Downloads/ece281-lab5/src/hdl/clock_divider.vhd:63]
+	Parameter k_DIV bound to: 25000000 - type: integer 
+INFO: [Synth 8-3491] module 'clock_divider' declared at 'C:/Users/akeny/Downloads/ece281-lab5/src/hdl/clock_divider.vhd:53' bound to instance 'clkdiv_inst2' of component 'clock_divider' [C:/Users/akeny/Downloads/ece281-lab5/src/hdl/top_basys3.vhd:164]
+INFO: [Synth 8-638] synthesizing module 'clock_divider__parameterized1' [C:/Users/akeny/Downloads/ece281-lab5/src/hdl/clock_divider.vhd:63]
+	Parameter k_DIV bound to: 25000000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'clock_divider__parameterized1' (3#1) [C:/Users/akeny/Downloads/ece281-lab5/src/hdl/clock_divider.vhd:63]
+INFO: [Synth 8-3491] module 'twoscomp_decimal' declared at 'C:/Users/akeny/Downloads/ece281-lab5/src/hdl/twoscomp_decimal.vhd:11' bound to instance 'twoscomp_decimal_inst' of component 'twoscomp_decimal' [C:/Users/akeny/Downloads/ece281-lab5/src/hdl/top_basys3.vhd:172]
+INFO: [Synth 8-638] synthesizing module 'twoscomp_decimal' [C:/Users/akeny/Downloads/ece281-lab5/src/hdl/twoscomp_decimal.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'twoscomp_decimal' (4#1) [C:/Users/akeny/Downloads/ece281-lab5/src/hdl/twoscomp_decimal.vhd:21]
+INFO: [Synth 8-3491] module 'sevenSegDecoder' declared at 'C:/Users/akeny/Downloads/ece281-lab5/basic_cpu.srcs/sources_1/new/sevenSeg.vhd:34' bound to instance 'sevenSeg_inst' of component 'sevenSegDecoder' [C:/Users/akeny/Downloads/ece281-lab5/src/hdl/top_basys3.vhd:182]
+INFO: [Synth 8-638] synthesizing module 'sevenSegDecoder' [C:/Users/akeny/Downloads/ece281-lab5/basic_cpu.srcs/sources_1/new/sevenSeg.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'sevenSegDecoder' (5#1) [C:/Users/akeny/Downloads/ece281-lab5/basic_cpu.srcs/sources_1/new/sevenSeg.vhd:39]
+INFO: [Synth 8-3491] module 'TDM4' declared at 'C:/Users/akeny/Downloads/ece281-lab5/src/hdl/TDM4.vhd:56' bound to instance 'TDM_inst' of component 'TDM4' [C:/Users/akeny/Downloads/ece281-lab5/src/hdl/top_basys3.vhd:194]
+INFO: [Synth 8-638] synthesizing module 'TDM4' [C:/Users/akeny/Downloads/ece281-lab5/src/hdl/TDM4.vhd:69]
+	Parameter k_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'TDM4' (6#1) [C:/Users/akeny/Downloads/ece281-lab5/src/hdl/TDM4.vhd:69]
+INFO: [Synth 8-3491] module 'ALU' declared at 'C:/Users/akeny/Downloads/ece281-lab5/src/hdl/ALU.vhd:38' bound to instance 'ALU_inst' of component 'ALU' [C:/Users/akeny/Downloads/ece281-lab5/src/hdl/top_basys3.vhd:209]
+INFO: [Synth 8-638] synthesizing module 'ALU' [C:/Users/akeny/Downloads/ece281-lab5/src/hdl/ALU.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'ALU' (7#1) [C:/Users/akeny/Downloads/ece281-lab5/src/hdl/ALU.vhd:48]
+WARNING: [Synth 8-6426] Mix of Sync and Async assignments to register 'led_reg' in module 'top_basys3' in the same process may cause logic issues. 
+ Please split the sync and async parts into different processes [C:/Users/akeny/Downloads/ece281-lab5/src/hdl/top_basys3.vhd:225]
+INFO: [Synth 8-256] done synthesizing module 'top_basys3' (8#1) [C:/Users/akeny/Downloads/ece281-lab5/src/hdl/top_basys3.vhd:46]
+WARNING: [Synth 8-3917] design top_basys3 has port led[12] driven by constant 0
+WARNING: [Synth 8-3917] design top_basys3 has port led[11] driven by constant 0
+WARNING: [Synth 8-3917] design top_basys3 has port led[10] driven by constant 0
+WARNING: [Synth 8-3917] design top_basys3 has port led[9] driven by constant 0
+WARNING: [Synth 8-3917] design top_basys3 has port led[8] driven by constant 0
+WARNING: [Synth 8-3917] design top_basys3 has port led[7] driven by constant 0
+WARNING: [Synth 8-3917] design top_basys3 has port led[6] driven by constant 0
+WARNING: [Synth 8-3917] design top_basys3 has port led[5] driven by constant 0
+WARNING: [Synth 8-3917] design top_basys3 has port led[4] driven by constant 0
+WARNING: [Synth 8-3331] design top_basys3 has unconnected port sw[15]
+WARNING: [Synth 8-3331] design top_basys3 has unconnected port sw[14]
+WARNING: [Synth 8-3331] design top_basys3 has unconnected port sw[13]
+WARNING: [Synth 8-3331] design top_basys3 has unconnected port sw[12]
+WARNING: [Synth 8-3331] design top_basys3 has unconnected port sw[11]
+WARNING: [Synth 8-3331] design top_basys3 has unconnected port sw[10]
+WARNING: [Synth 8-3331] design top_basys3 has unconnected port sw[9]
+WARNING: [Synth 8-3331] design top_basys3 has unconnected port sw[8]
+WARNING: [Synth 8-3331] design top_basys3 has unconnected port btnL
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 395.363 ; gain = 154.277
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 395.363 ; gain = 154.277
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 395.363 ; gain = 154.277
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/akeny/Downloads/ece281-lab5/src/hdl/Basys3_Master.xdc]
+Finished Parsing XDC File [C:/Users/akeny/Downloads/ece281-lab5/src/hdl/Basys3_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/akeny/Downloads/ece281-lab5/src/hdl/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_basys3_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_basys3_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 723.980 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 723.980 ; gain = 482.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 723.980 ; gain = 482.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 723.980 ; gain = 482.895
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "f_Q_next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "f_clk" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "f_clk" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "o_tens2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "o_flags" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-327] inferring latch for variable 'reg_data_reg' [C:/Users/akeny/Downloads/ece281-lab5/basic_cpu.srcs/sources_1/new/eightBitRegister.vhd:49]
+WARNING: [Synth 8-327] inferring latch for variable 'w_result_reg' [C:/Users/akeny/Downloads/ece281-lab5/src/hdl/ALU.vhd:84]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 723.980 ; gain = 482.895
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     31 Bit       Adders := 3     
+	   2 Input      8 Bit       Adders := 2     
+	   3 Input      8 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               31 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     31 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 2     
+	   4 Input      8 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 5     
+	   2 Input      4 Bit        Muxes := 3     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   7 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module top_basys3 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+Module controller_fsm 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 2     
+Module clock_divider 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     31 Bit       Adders := 1     
++---Registers : 
+	               31 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module clock_divider__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     31 Bit       Adders := 1     
++---Registers : 
+	               31 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module twoscomp_decimal 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     31 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module TDM4 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 2     
+Module ALU 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5545] ROM "clkdiv_inst/f_clk" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clkdiv_inst2/f_clk" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "twoscomp_decimal_inst/o_tens2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ALU_inst/o_flags" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "clkdiv_inst/f_clk" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clkdiv_inst2/f_clk" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+WARNING: [Synth 8-3917] design top_basys3 has port led[12] driven by constant 0
+WARNING: [Synth 8-3917] design top_basys3 has port led[11] driven by constant 0
+WARNING: [Synth 8-3917] design top_basys3 has port led[10] driven by constant 0
+WARNING: [Synth 8-3917] design top_basys3 has port led[9] driven by constant 0
+WARNING: [Synth 8-3917] design top_basys3 has port led[8] driven by constant 0
+WARNING: [Synth 8-3917] design top_basys3 has port led[7] driven by constant 0
+WARNING: [Synth 8-3917] design top_basys3 has port led[6] driven by constant 0
+WARNING: [Synth 8-3917] design top_basys3 has port led[5] driven by constant 0
+WARNING: [Synth 8-3917] design top_basys3 has port led[4] driven by constant 0
+WARNING: [Synth 8-3331] design top_basys3 has unconnected port sw[15]
+WARNING: [Synth 8-3331] design top_basys3 has unconnected port sw[14]
+WARNING: [Synth 8-3331] design top_basys3 has unconnected port sw[13]
+WARNING: [Synth 8-3331] design top_basys3 has unconnected port sw[12]
+WARNING: [Synth 8-3331] design top_basys3 has unconnected port sw[11]
+WARNING: [Synth 8-3331] design top_basys3 has unconnected port sw[10]
+WARNING: [Synth 8-3331] design top_basys3 has unconnected port sw[9]
+WARNING: [Synth 8-3331] design top_basys3 has unconnected port sw[8]
+WARNING: [Synth 8-3331] design top_basys3 has unconnected port btnL
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 723.980 ; gain = 482.895
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:34 . Memory (MB): peak = 724.832 ; gain = 483.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:35 . Memory (MB): peak = 746.086 ; gain = 505.000
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:35 . Memory (MB): peak = 749.258 ; gain = 508.172
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:36 . Memory (MB): peak = 749.258 ; gain = 508.172
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:36 . Memory (MB): peak = 749.258 ; gain = 508.172
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:36 . Memory (MB): peak = 749.258 ; gain = 508.172
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:36 . Memory (MB): peak = 749.258 ; gain = 508.172
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:36 . Memory (MB): peak = 749.258 ; gain = 508.172
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:36 . Memory (MB): peak = 749.258 ; gain = 508.172
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     2|
+|2     |CARRY4 |    86|
+|3     |LUT1   |    36|
+|4     |LUT2   |   193|
+|5     |LUT3   |    93|
+|6     |LUT4   |    83|
+|7     |LUT5   |    74|
+|8     |LUT6   |   111|
+|9     |FDCE   |    66|
+|10    |FDRE   |     4|
+|11    |LD     |    24|
+|12    |IBUF   |    11|
+|13    |OBUF   |    27|
++------+-------+------+
+
+Report Instance Areas: 
++------+------------------------+------------------------------+------+
+|      |Instance                |Module                        |Cells |
++------+------------------------+------------------------------+------+
+|1     |top                     |                              |   810|
+|2     |  ALU_inst              |ALU                           |    23|
+|3     |  TDM_inst              |TDM4                          |     8|
+|4     |  clkdiv_inst           |clock_divider                 |    80|
+|5     |  clkdiv_inst2          |clock_divider__parameterized1 |    80|
+|6     |  controller_fsm_inst   |controller_fsm                |   231|
+|7     |  regA                  |eightBitRegister              |    36|
+|8     |  regB                  |eightBitRegister_0            |    22|
+|9     |  twoscomp_decimal_inst |twoscomp_decimal              |   290|
++------+------------------------+------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:37 . Memory (MB): peak = 749.258 ; gain = 508.172
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 20 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:28 . Memory (MB): peak = 749.258 ; gain = 179.555
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:37 . Memory (MB): peak = 749.258 ; gain = 508.172
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 121 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 24 instances were transformed.
+  LD => LDCE: 24 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+50 Infos, 40 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:40 . Memory (MB): peak = 749.258 ; gain = 520.801
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/akeny/Downloads/ece281-lab5/basic_cpu.runs/synth_1/top_basys3.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_basys3_utilization_synth.rpt -pb top_basys3_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 749.258 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon May  6 21:53:16 2024...

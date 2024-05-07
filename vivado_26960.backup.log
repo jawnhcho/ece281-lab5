@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed May  1 22:17:36 2024
+# Process ID: 26960
+# Current directory: C:/Users/akeny/Downloads/ece281-lab5
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18992 C:\Users\akeny\Downloads\ece281-lab5\basic_cpu.xpr
+# Log file: C:/Users/akeny/Downloads/ece281-lab5/vivado.log
+# Journal file: C:/Users/akeny/Downloads/ece281-lab5\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/akeny/Downloads/ece281-lab5/basic_cpu.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/C25Jon.Cho/ece281-lab5' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-2] IPUserFilesDir: Could not find the directory 'C:/Users/akeny/Downloads/ece281-lab5/basic_cpu.ip_user_files', nor could it be found using path 'C:/Users/C25Jon.Cho/ece281-lab5/basic_cpu.ip_user_files'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 769.527 ; gain = 49.930
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
