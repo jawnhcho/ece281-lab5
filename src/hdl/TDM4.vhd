@@ -54,6 +54,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 use ieee.numeric_std.all;
 
 entity TDM4 is
+<<<<<<< HEAD
     generic ( constant k_WIDTH : natural  := 4); -- bits in input and output
 	Port ( i_clk   	 : in  STD_LOGIC;
        	i_reset   	 : in  STD_LOGIC; -- asynchronous
@@ -64,6 +65,18 @@ entity TDM4 is
    		o_data   	 : out STD_LOGIC_VECTOR (k_WIDTH - 1 downto 0);
    		o_sel   	 : out STD_LOGIC_VECTOR (3 downto 0)    -- selected data line (one-cold)
     );
+=======
+	generic ( constant k_WIDTH : natural  := 4); -- bits in input and output
+    Port ( i_clk		: in  STD_LOGIC;
+           i_reset		: in  STD_LOGIC; -- asynchronous
+           i_sign 		: in  STD_LOGIC_VECTOR (k_WIDTH - 1 downto 0);
+		   i_hund 		: in  STD_LOGIC_VECTOR (k_WIDTH - 1 downto 0);
+		   i_tens 		: in  STD_LOGIC_VECTOR (k_WIDTH - 1 downto 0);
+		   i_ones 		: in  STD_LOGIC_VECTOR (k_WIDTH - 1 downto 0);
+		   o_data		: out STD_LOGIC_VECTOR (k_WIDTH - 1 downto 0);
+		   o_sel		: out STD_LOGIC_VECTOR (3 downto 0)	-- selected data line (one-cold)
+	);
+>>>>>>> dc83551f703d570174bccf8ffd80b9d96fb2cec8
 end TDM4;
 
 architecture behavioral of TDM4 is
@@ -88,6 +101,7 @@ begin
     -----------------------------------------------------
     
 
+<<<<<<< HEAD
     -- CONCURRENT STATEMENTS ----------------------------
     
     -- output MUXs
@@ -101,4 +115,19 @@ begin
    			"1101" when f_sel = "01" else
    			"1110";
    	 
+=======
+	-- CONCURRENT STATEMENTS ----------------------------
+	
+	-- output MUXs
+	o_DATA <= i_sign when f_sel = "11" else
+			  i_hund when f_sel = "10" else
+			  i_tens when f_sel = "01" else
+			  i_ones;
+			  
+	o_SEL  <=  "0111" when f_sel = "11" else
+			   "1011" when f_sel = "10" else
+			   "1101" when f_sel = "01" else
+			   "1110";
+		
+>>>>>>> dc83551f703d570174bccf8ffd80b9d96fb2cec8
 end behavioral;

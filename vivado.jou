@@ -496,3 +496,96 @@ set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
 set_property PROGRAM.FILE {C:/Users/akeny/Downloads/ece281-lab5/basic_cpu.runs/impl_1/top_basys3.bit} [get_hw_devices xc7a35t_0]
 program_hw_devices [get_hw_devices xc7a35t_0]
 refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+file mkdir C:/Users/akeny/Downloads/ece281-lab5/basic_cpu.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/akeny/Downloads/ece281-lab5/basic_cpu.srcs/sim_1/new/ALU_TB.vhd w ]
+add_files -fileset sim_1 C:/Users/akeny/Downloads/ece281-lab5/basic_cpu.srcs/sim_1/new/ALU_TB.vhd
+update_compile_order -fileset sim_1
+launch_simulation
+source twoscomp_decimal_tb.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top ALU_TB [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+launch_simulation
+update_compile_order -fileset sim_1
+launch_simulation
+source ALU_TB.tcl
+add_bp {C:/Users/akeny/Downloads/ece281-lab5/src/hdl/ALU.vhd} 73
+close_sim
+launch_simulation
+source ALU_TB.tcl
+add_bp {C:/Users/akeny/Downloads/ece281-lab5/src/hdl/ALU.vhd} 82
+close_sim
+close_sim
+launch_simulation
+source ALU_TB.tcl
+close_sim
+launch_simulation
+source ALU_TB.tcl
+close_sim
+launch_simulation
+source ALU_TB.tcl
+remove_bps -file {C:/Users/akeny/Downloads/ece281-lab5/src/hdl/ALU.vhd} -line 73
+close_sim
+launch_simulation
+source ALU_TB.tcl
+remove_bps -file {C:/Users/akeny/Downloads/ece281-lab5/src/hdl/ALU.vhd} -line 82
+add_bp {C:/Users/akeny/Downloads/ece281-lab5/src/hdl/ALU.vhd} 82
+close_sim
+launch_simulation
+source ALU_TB.tcl
+close_sim
+launch_simulation
+source ALU_TB.tcl
+close_sim
+launch_simulation
+source ALU_TB.tcl
+close_sim
+launch_simulation
+source ALU_TB.tcl
+close_sim
+launch_simulation
+source ALU_TB.tcl
+close_sim
+launch_simulation
+source ALU_TB.tcl
+close_sim
+launch_simulation
+source ALU_TB.tcl
+close_sim
+launch_simulation
+source ALU_TB.tcl
+close_sim
+launch_simulation
+source ALU_TB.tcl
+close_sim
+launch_simulation
+source ALU_TB.tcl
+close_sim
+launch_simulation
+source ALU_TB.tcl
+close_sim
+launch_simulation
+source ALU_TB.tcl
+close_sim
+launch_simulation
+source ALU_TB.tcl
+close_sim
+launch_simulation
+source ALU_TB.tcl
+close_sim
+launch_simulation
+source ALU_TB.tcl
+close_sim
+launch_simulation
+source ALU_TB.tcl
+close_sim
+launch_simulation
+source ALU_TB.tcl
+close_sim
+launch_simulation
+source ALU_TB.tcl
+step
