@@ -79,7 +79,7 @@ begin
 	w_and <= (i_A and i_B);
 	w_or <= (i_A or i_B);
 	w_left_shift  <= std_logic_vector(shift_left(w_A_signed, w_B_decimal));
-	w_right_shift <= std_logic_vector(shift_right(w_B_signed, w_B_decimal));
+	w_right_shift <= std_logic_vector(shift_right(w_A_signed, to_integer(w_B_signed)));
     
 	w_result <= (w_sum(7 downto 0)) when i_op = "000" else
             	(w_diff(7 downto 0)) when i_op = "011" else
