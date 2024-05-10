@@ -3,11 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   -->
 
-<<<<<<< HEAD
 <Project Version="7" Minor="38" Path="C:/Users/akeny/Downloads/ece281-lab5/basic_cpu.xpr">
-=======
-<Project Version="7" Minor="38" Path="C:/Users/C25Jon.Cho/ece281-lab5/basic_cpu.xpr">
->>>>>>> dc83551f703d570174bccf8ffd80b9d96fb2cec8
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="846655f69311450f8a61d78ff6805056"/>
@@ -71,25 +67,12 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/src/hdl/TDM4.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PPRDIR/src/hdl/clock_divider.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/controller_fsm.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-<<<<<<< HEAD
       <File Path="$PSRCDIR/sources_1/new/eightBitRegister.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -97,9 +80,6 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/sevenSeg.vhd">
-=======
-      <File Path="$PPRDIR/../ece281-lab2-redo/src/hdl/sevenSegDecoder.vhd">
->>>>>>> dc83551f703d570174bccf8ffd80b9d96fb2cec8
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -113,6 +93,20 @@
       </File>
       <File Path="$PPRDIR/src/hdl/top_basys3.vhd">
         <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/src/hdl/TDM4.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/controller_fsm.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -151,13 +145,6 @@
         </FileInfo>
       </File>
       <File Path="$PPRDIR/src/hdl/clock_divider_tb.vhd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_1/new/ALU_TB.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>

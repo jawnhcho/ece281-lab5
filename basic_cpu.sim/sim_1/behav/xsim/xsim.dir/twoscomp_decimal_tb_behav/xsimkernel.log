@@ -1,0 +1,7 @@
+Running: xsim.dir/twoscomp_decimal_tb_behav/xsimk.exe -simmode gui -wdb twoscomp_decimal_tb_behav.wdb -simrunnum 0 -socket 51091
+Design successfully loaded
+Design Loading Memory Usage: 7144 KB (Peak: 7144 KB)
+Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 7736 KB (Peak: 7736 KB)
+Simulation CPU Usage: 0 ms

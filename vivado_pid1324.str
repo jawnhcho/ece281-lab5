@@ -8712,3 +8712,12 @@ selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 542, -139); // n (o, a
 // HMemoryUtils.trashcanNow. Engine heap size: 2,144 MB. GUI used memory: 198 MB. Current time: 5/10/24 9:10:06 AM MDT
 // HMemoryUtils.trashcanNow. Engine heap size: 2,144 MB. GUI used memory: 197 MB. Current time: 5/10/24 9:40:09 AM MDT
 // HMemoryUtils.trashcanNow. Engine heap size: 2,144 MB. GUI used memory: 199 MB. Current time: 5/10/24 10:27:08 AM MDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
